@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
 
+os.environ.get('VAR_NAME', 'default_val')
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://student:examen@db:5432/points'
 db = SQLAlchemy(app)
